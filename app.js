@@ -1,7 +1,7 @@
 let qrdata = document.getElementById("qr-data");
 let qrCode = new QRCode(document.getElementById("qrcode"), {
-    width: 250,
-    height: 250
+    width: 500,
+    height: 500
 });
 let canvas = document.getElementById("qr-canvas");
 let ctx = canvas.getContext("2d");
@@ -12,8 +12,8 @@ function generateQR() {
 
     setTimeout(function () {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        let qrSize = 250;
-        let margin = 10; // Tamaño del marco blanco
+        let qrSize = 500;
+        let margin = 15; // Tamaño del marco blanco
         canvas.width = qrSize + 2 * margin;
         canvas.height = qrSize + 2 * margin;
         ctx.fillStyle = "white";
